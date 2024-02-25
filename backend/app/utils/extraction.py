@@ -74,7 +74,7 @@ def extract_from_gpt(text):
                 "time_duration": {
                     "start": "month,yyyy",
                     "end": "month,yyyy",
-                    "duration_months": Duration or 0
+                    "duration_months": Duration
                 }
             }
         ],
@@ -87,7 +87,7 @@ def extract_from_gpt(text):
                 "time_duration": {
                     "start": "month,yyyy",
                     "end": "month,yyyy",
-                    "duration_months": Duration or 0
+                    "duration_months": Duration
                 }
             }
         ],
@@ -95,13 +95,13 @@ def extract_from_gpt(text):
             "name": "College Name",
             "branch": "Branch",
             "degree": "Degree",
-            "cgpa": CGPA or 0,
+            "cgpa": CGPA,
             "start": "month,yyyy",
             "end": "month,yyyy"
         }
     }
 
-    Directly parse and structure the resume text into this JSON format, ensuring all fields are accurately filled with the provided data or marked as 'N/A' if unavailable."""
+    Directly parse and structure the resume text into this JSON format, ensuring all fields are accurately filled with the provided data or marked as 'N/A' for string and 0 for number if unavailable."""
 
     extracted_text = query_gpt(prompt + "\n\nResume Text:\n" + text)
     return extracted_text

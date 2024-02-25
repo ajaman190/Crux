@@ -15,7 +15,7 @@ export function ResumeTable({ data }: Readonly<{ data: ReadonlyArray<ResumeType>
   const [fileUrl, setFileUrl] = useState('');
 
   const handleFileView = (file: string) => {
-    setFileUrl(process.env.REACT_APP_BASE_URL+'/api/v1/serve-resume/'+file.split('/')[-1]);
+    setFileUrl(`${process.env.REACT_APP_BASE_URL}/api/v1/serve-resume/${file}/`);
     setViewerOpen(true);
   }
   

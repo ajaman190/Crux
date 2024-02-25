@@ -62,7 +62,7 @@ const EditDialog: React.FC = () => {
             <Label htmlFor="description" className="text-right">
               Job Description*
             </Label>
-            <Textarea id="description" placeholder="Type your message here." value={jobDescription || ''} onChange={(event) => handleDescriptionChange(event.target.value)} className="col-span-3" />
+            <Textarea id="description" placeholder="Type job description here." value={jobDescription || ''} onChange={(event) => handleDescriptionChange(event.target.value)} className="col-span-3" />
           </div>
         </div>
         <DialogFooter className="flex justify-between w-full grid grid-cols-2 gap-2">

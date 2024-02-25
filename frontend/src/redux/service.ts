@@ -38,7 +38,6 @@ export const runTask = createAsyncThunk(
         },
       };
       const { data } = await client.put('/api/v1/run-task/', task.job, config);
-      console.log(data)
       return data;
     } catch (error: any) {
       if (error.response?.data?.message) {

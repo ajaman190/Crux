@@ -54,8 +54,8 @@ v
 
 ### Links
 
-- **Frontend GitHub Repository**: [Insert Link Here]
-- **Backend GitHub Repository**: [Insert Link Here]
+- **Frontend GitHub Repository**: [Link]
+- **Backend GitHub Repository**: [Link]
 
 ### Contact Information
 

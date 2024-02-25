@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Task, ResumeFile
 import json
+import os
 
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,6 +15,11 @@ class ResumeFileSerializer(serializers.ModelSerializer):
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
+        if representation['file']:
+            file_path = representation['file']
+            filename = os.path.basename(file_path)
+            representation['file'] = filename
+
         if representation['details']:
             details = json.loads(representation['details'])
             del representation['details']
