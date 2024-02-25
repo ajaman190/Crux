@@ -54,8 +54,8 @@ v
 
 ### Links
 
-- **Frontend GitHub Repository**: [Link]
-- **Backend GitHub Repository**: [Link]
+- **Frontend GitHub Repository**: [https://github.com/ajaman190/Crux/blob/master/frontend/README.md]
+- **Backend GitHub Repository**: [https://github.com/ajaman190/Crux/blob/master/backend/README.md]
 
 ### Contact Information
 
