@@ -14,31 +14,31 @@ This project streamlines the recruitment process by enabling employers to effici
 
 ### Application Flow
 
-\`\`\`plaintext
-+----------------+ +---------------+ +-----------------+ +-------------------+
-| | | | | | | |
-| Web Interface | ----> | Create Task | ----> | Upload Resumes | ----> | Submit Job |
-| (Employer) | | (Generate ID) | | & Job Desc | | Description |
-| | | | | | | |
-+----------------+ +---------------+ +-----------------+ +-------------------+
-|
-v
-+-------------------+
-| |
-| Analyze & Score |
-| Resumes based |
-| on Job Description|
-| |
-+-------------------+
-|
-v
-+----------------------+
-| |
-| Display Results & |
-| Allow Adjustments |
-| |
-+----------------------+
-\`\`\`
+```
++----------------+     +---------------+     +-----------------+     +-------------------+
+|                |     |               |     |                 |     |                   |
+| Web Interface  |---->|  Create Task  |---->|  Upload Resumes |---->|    Submit Job     |
+| (Employer)     |     | (Generate ID) |     |  & Job Desc     |     |    Description    |
+|                |     |               |     |                 |     |                   |
++----------------+     +---------------+     +-----------------+     +-------------------+
+                                                                               |
+                                                                               v
+                                                                     +-------------------+
+                                                                     |                   |
+                                                                     |  Analyze & Score  |
+                                                                     |   Resumes based   |
+                                                                     | on Job Description|
+                                                                     |                   |
+                                                                     +-------------------+
+                                                                               |
+                                                                               v
+                                                                    +----------------------+
+                                                                    |                      |
+                                                                    |   Display Results &  |
+                                                                    |   Allow Adjustments  |
+                                                                    |                      |
+                                                                    +----------------------+
+```
 
 ### Tech Stack
 
