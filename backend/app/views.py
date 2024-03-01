@@ -11,7 +11,7 @@ from .models import Task, ResumeFile
 from .serializers import ResumeFileSerializer
 from .utils.extraction import extract_details
 from .utils.scoring import score_resume_details
-from .utils.auth import CustomJWTAuthentication
+from .utils.auth import Authentication
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
@@ -28,7 +28,7 @@ def create_task(request):
         return JsonResponse({'error': str(e)}, status=400)
 
 @api_view(['POST'])
-@authentication_classes([CustomJWTAuthentication])
+@authentication_classes([Authentication])
 def upload_files(request):
     try:
         task_id = getattr(request, 'task_id', None)
@@ -43,7 +43,7 @@ def upload_files(request):
         return JsonResponse({'error': str(e)}, status=400)
 
 @api_view(['DELETE'])
-@authentication_classes([CustomJWTAuthentication])
+@authentication_classes([Authentication])
 def delete_file(request, file_id):
     try:
         file_to_delete = ResumeFile.objects.get(id=file_id, task_id=request.task_id)
@@ -65,7 +65,7 @@ def serve_file(request, file_name):
         return JsonResponse({'error': 'The requested pdf was not found'}, status=404)
 
 @api_view(['PUT'])
-@authentication_classes([CustomJWTAuthentication])
+@authentication_classes([Authentication])
 def run_task(request):
     try:
         task_id = getattr(request, 'task_id', None)
